@@ -6,15 +6,19 @@ const app = express();
 const PORT = 3000;
 
 app.get('/moqa-last-your', (req, res) => {
+  const encodedApiKey = req.headers.authorization.split(' ')[1];
+  const decodedApiKey = Buffer.from(encodedApiKey, 'base64').toString('utf-8');
+  
+  const [email, password] = decodedApiKey.split(':');
+
   const login_url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${process.env.API_KEY}`;
   const query_url = `https://firestore.googleapis.com/v1/projects/${process.env.PROJECT_ID}/databases/(default)/documents/:runQuery`;
 
   const sigin_payload = {
-    email: process.env.EMAIL,
-    password: process.env.PASSWORD,
+    email,
+    password,
     returnSecureToken: true
   };
-  console.log('payload', sigin_payload);
 
   axios.post(login_url, sigin_payload)
     .then(response => {
