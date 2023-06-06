@@ -1,0 +1,20 @@
+{
+  "name": "moqa-express-api",
+  "version": "1.0.0",
+  "description": "The MOQA Express API is a RESTful web service built with Express.js to retrieve and calculate average pollutant data from a Firestore database. It provides a convenient interface for accessing environmental information such as pollutant levels, humidity, temperature, and more. The API utilizes Firebase Authentication for user authentication and securely handles sensitive information using environment variables. Simplify the retrieval and processing of environmental data with the MOQA Express API.",  "main": "app.js",
+  "scripts": {
+    "dev": "node app.js"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Maria Laura",
+    "email": "marialauradev@gmail.com",
+    "url": "https://github.com/mariaLauraDev"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2"
+  }
+}
