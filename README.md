@@ -1,2 +1,2 @@
 # moqa-express-api
-The MOQA Express API is a RESTful web service that retrieves and calculates average pollutant data from Firestore. It provides access to environmental information such as pollutant levels, humidity, temperature, and more. Simplify environmental data retrieval and processing with this API.
+A API MOQA Express é um serviço Web RESTful criado com o Express.js, uma estrutura popular do Node.js. Fornece uma interface simples e conveniente para recuperar e calcular dados médios de poluentes a partir de uma base de dados Firestore.
