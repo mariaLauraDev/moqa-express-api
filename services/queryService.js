@@ -13,7 +13,8 @@ class QueryService {
 
     let oneHourAgoISO = oneHourAgo.toISOString();
     oneHourAgoISO = "2023-05-01T00:00:00Z"; // linha hardcoded
-
+    
+    //colocar condições de log de dados
     const queryPayload = {
       "structuredQuery": {
         "where": {
